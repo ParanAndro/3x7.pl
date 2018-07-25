@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+$fonts: Lato, sans-serif;
+$global-gray: #8497b0;
+$global-orange: #FF4500;
+.text-bigger {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 25px;
+	text-align: justify;
+}
+.text-smaller {
+	font-size: 12px;
+	font-weight: 250;
+	line-height: 20px;
+	text-align: justify;
+}
+
+body {
+font: 100% $fonts;
+margin: 0 auto;
+}
+* {
+box-sizing: border-box;
+}
+.box {
+	margin-top: 50px;
+}
+.container {
+	margin: 0 auto;
+	max-width: 850px;
+}
+.center {
+	text-align: center;
+}
+h1 {
+	font-size: 54px;
+	font-weight: 700;
+	letter-spacing: 4px;
+}
+h2 {
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 4px;
+}
+h3 {
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+
+.title {
+	display: flex;
+	justify-content: space-around;
+	.line {
+		width: 300px;
+		border-top: 2px solid;
+		margin-top: 5%;
+	}
+}
+.box-white {
+	@extend .box;
+	.line {
+		border-color: $global-orange;
+	}
+	h2 {
+		color: $global-orange;
+	}
+}
+.box-gray {
+	@extend .box;
+	background-color: $global-gray;
+	.line {
+		border-color: #FFFFFF;
+	}
+	h2 {
+		color: #FFFFFF;
+	}
+}
+
+@media (max-width: 900px) {
+	h1 {
+		font-size: 40px;
+	}
+	h2 {
+		font-size: 20px;
+	}
+	h3 {
+		font-size: 15px;
+	}
+	.box {
+		margin-top: 10px;
+	}
+
+	.title .line {
+			width: 100px;
+			margin-top: 8%;
+		}
+	.text-bigger {
+		font-size: 12px;
+	}
+	.text-smaller {
+		font-size: 10px;
+	}
+	.box-mobile {
+		width: 300px;
+		margin: 0 auto;
+	}
+}
