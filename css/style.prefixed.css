@@ -54,8 +54,10 @@ h3 {
 }
 
 .title {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .title .line {
@@ -114,10 +116,13 @@ h3 {
 }
 
 nav {
+  display: -ms-flexbox;
   display: flex;
   background-color: #FF4500;
-  flex-direction: row;
-  justify-content: space-around;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: fixed;
   top: 0;
   width: 100%;
@@ -132,9 +137,12 @@ nav .nav-brand {
 
 nav ul {
   list-style: none;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 nav ul li {
@@ -166,8 +174,10 @@ nav .menu-icon {
 
 @media (max-width: 767px) {
   nav {
-    justify-content: space-between;
-    align-items: center;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
     position: relative;
   }
   nav ul {
@@ -192,9 +202,12 @@ nav .menu-icon {
   min-height: 100vh;
   background-size: cover;
   background-position: center;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .hero .welcome {
@@ -205,16 +218,22 @@ nav .menu-icon {
 }
 
 .all-projects {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
   margin-top: 0;
 }
 
 .all-projects .project {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
   margin-top: 1em;
 }
 
@@ -258,8 +277,10 @@ nav .menu-icon {
 
 .all-projects .project .hidd {
   width: 70%;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
   margin-top: 2em;
   opacity: 0;
   transform: scale(0);
@@ -268,8 +289,10 @@ nav .menu-icon {
 
 .all-projects .project .hidd .visit-btns-line {
   width: 70%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 .all-projects .project .hidd .visit-btns-line .visit-btns {
@@ -304,5 +327,4 @@ nav .menu-icon {
     font-weight: normal;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.prefixed.css.map */
