@@ -1,7 +1,7 @@
 nav {
 	display: flex;
 	background-color: $global-orange;
-	flex-direction: row;
+	@extend .row;
 	justify-content: space-around;
 	position: fixed;
     top: 0; 
@@ -43,7 +43,7 @@ nav {
 		}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
 	nav {
 		justify-content: space-between;
 		align-items: center;

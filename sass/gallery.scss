@@ -5,7 +5,7 @@
 	margin-top: 0;
 	.project {
 		display: flex;
-		flex-direction: column;
+		@extend .column;
 		align-items: center;
 		margin-top: 1em;
 		.show-buttons  {
@@ -16,14 +16,12 @@
 			color: $global-gray;
 			border-radius: 5px;
 			cursor: pointer;
-			border: 2px solid #FFFFFF;
 				p {
 				margin: 5px auto;
 				}
 				span {
 					content: " \25BD";
 					max-width: 10px;
-
 					font-weight: bold;
 				}
 		}
