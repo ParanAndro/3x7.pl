@@ -76,5 +76,5 @@ for (i = 0; i < allButtons.length; i++) {
 		}
 	}, hideDiv());
 };
-
+ 
 
