@@ -4,6 +4,7 @@
   font-weight: 300;
   line-height: 25px;
   text-align: justify;
+  padding-bottom: 30px;
 }
 
 .text-smaller {
@@ -31,7 +32,7 @@ body {
 }
 
 .box, .box-white, .box-gray {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .container {
@@ -146,6 +147,7 @@ nav .nav-brand {
   width: auto;
   height: 3em;
   padding: 2px 0;
+  cursor: pointer;
 }
 
 nav ul {
@@ -270,6 +272,22 @@ nav .menu-icon {
 
 .all-projects .project .btn-3 {
   background-color: #CC3366;
+}
+
+.all-projects .project .btn-4 {
+  background-color: #CC0066;
+}
+
+.all-projects .project .btn-5 {
+  background-color: #993366;
+}
+
+.all-projects .project .btn-6 {
+  background-color: #CC3399;
+}
+
+.all-projects .project .btn-7 {
+  background-color: #FF0066;
 }
 
 .all-projects .project .hidd {
