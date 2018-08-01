@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Project-1</title>
+		<title>3razy7.pl</title>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 	<body>
 		<header>
 			<nav>
-					<a href="https://www.3razy7.pl" alt="3razy7.pl"><img class="nav-brand" src="images/logo.png" href="https://www.3razy7.pl"></a>
+					<a href="https://www.3razy7.pl"><img class="nav-brand" src="images/logo.jpg" alt="3razy7.pl"></a>
 				<ul id="menu">
 					<li><a href="#about-me" id="1">O mnie</a></li>
 					<li><a href="#about-page" id="2">O tej stronie</a></li>
@@ -27,7 +27,7 @@
 						<h2>PORTFOLIO</h2>
 				</div>
 			</section>
-		<header>
+		</header>
 		<section class="box-white" id="1-target">
 			<section class="container">
 				<div class="title">
@@ -50,9 +50,13 @@
 					<h2>O tej stronie</h2>
 					<div class="line"></div>
 				</div>
+				<div class="this-page">
+					<a class="btn-this-page-github" target="blank" href="">Zobacz tę stronę na GitHub</a>
+				</div>
 				<div class="box-mobile">
-					<p class="text-bigger">Strona 3x7.pl jest witryną stworzoną na potrzeby tych z Państwa, którzy poszukują  do pracy osób na stanowisko junior web-developera. Napisałem ją na „czystych” kodach html/css/js, bez używania jakichkolwiek frameworków i bibliotek. Kod być może jest przez to trochę dłuższy, ale moi programistyczni mentorzy zawsze mi powtarzali, że miarą wartości programisty jest rozumienie logiki działania kodu w jego podstawowej postaci.  W sekcji „Galeria” zamieściłem wybrane projekty, które zrealizowałem w ciągu ostatnich kilku miesięcy. Wszystkie moje prace są dostępne na <a target="blank" href="https://github.com/ParanAndro?tab=repositories">Githubie.</a> <br><br>Zapraszam do oglądania.
+					<p class="text-bigger">Strona 3razy7.pl jest witryną stworzoną na potrzeby tych z Państwa, którzy poszukują  do pracy osób na stanowisko junior web-developera. Napisałem ją na „czystych” kodach html/css/js, bez używania jakichkolwiek frameworków i bibliotek, jedynie w oparciu o Flexbox. Kod być może jest przez to trochę dłuższy, ale moi programistyczni mentorzy zawsze mi powtarzali, że miarą wartości programisty jest rozumienie logiki działania kodu w jego podstawowej postaci. W sekcji „Galeria” zamieściłem wybrane projekty, które zrealizowałem w ciągu ostatnich kilku miesięcy. Wszystkie moje prace są dostępne na <a target="blank" href="https://github.com/ParanAndro?tab=repositories">Githubie.</a> <br><br>Zapraszam do oglądania.
 					</p>
+					
 				</div>
 			</section>
 		</section>
@@ -65,72 +69,86 @@
 				</div>
 				<div class="all-projects">
 					<div class="project">
-						<button class="show-buttons btn-1"><p>Gra "kamień, papier, nożyce"</p><span></span></button>
+						<button class="show-buttons btn-1">Gra "kamień, papier, nożyce"<br><span></span></button>
 						<div class="hidd">
-							<p class="text-smaller">Klasyczna gra, w której interfejs zbudowałem przy użyciu Bootstrapa. Obsługa gry została napisana w „czystym” javascripcie. Grasz „z komputerem”, którego wybory definiuje metoda Math.random(). Zwycięża strona, która pierwsza zdobędzie 10 punktów.</p>
+							<div class="description-project">
+								<p class="text-smaller">Klasyczna gra, w której interfejs zbudowałem przy użyciu Bootstrapa. Obsługa gry została napisana w „czystym” javascripcie. Grasz „z komputerem”, którego wybory definiuje metoda Math.random(). Zwycięża strona, która pierwsza zdobędzie 10 punktów.</p>
+							</diV>
 							<div class="visit-btns-line">
-								<a target="blank" href="https://github.com/ParanAndro/Porfolio-game-in-javascript"><button class="visit-btns">Zobacz na GitHub</button></a>
-								<button class="visit-btns">Zobacz na www</button>
+								<a class="visit-btns" target="blank" href="https://github.com/ParanAndro/Porfolio-game-in-javascript">Zobacz na GitHub</a>
+								<a class="visit-btns">Zobacz na www</a>
 							</div>
 						</div>
 					</div>
 					<div class="project">
-						<button class="show-buttons btn-2"><p>Wyszukiwarka gifów</p><span></span></button>
+						<button class="show-buttons btn-2">Wyszukiwarka gifów<br><span></span></button>
 						<div class="hidd">
-							<p class="text-smaller">Dynamiczna wyszukiwarka gif-ów. Aplikacja napisana z użyciem biblioteki Reacta z wydzielonymi trzema komponentami. Ponieważ aplikacja nie jest zbyt skomplikowana, zastosowałem podejście bottom-top, tak, jak zalecają programiści Facebooka.</p>
+							<div class="description-project">
+								<p class="text-smaller">Dynamiczna wyszukiwarka gif-ów. Aplikacja napisana z użyciem biblioteki Reacta z wydzielonymi trzema komponentami. Ponieważ aplikacja nie jest zbyt skomplikowana, zastosowałem podejście bottom-top, tak, jak zalecają programiści Facebooka.</p>
+							</diV>
 							<div class="visit-btns-line">
-								<a target="blank" href="https://github.com/ParanAndro/Portfolio-GIFs-search-ReactJS"><button class="visit-btns">Zobacz na GitHub</button></a>
-								<button class="visit-btns">Zobacz na www</button>
+								<a class="visit-btns" target="blank" href="https://github.com/ParanAndro/Portfolio-GIFs-search-ReactJS">Zobacz na GitHub</a>
+								<a class="visit-btns">Zobacz na www</a>
 							</div>
 						</div>
 					</div>
 					<div class="project">
-						<button class="show-buttons btn-3"><p>Aplikacja TO DO</p><span></span></button>
+						<button class="show-buttons btn-3">Aplikacja TO DO<br><span></span></button>
 						<div class="hidd">
-							<p class="text-smaller">Popularna aplikacja, u mnie napisana z wykorzystaniem standardów ES6. Ułatwiłem sobie życie i zoptymalizowałem kod dzięki loaderom Webpacka. Aplikacja nie jest podpięta do żadnej bazy, więc dane nie zapisują się po przeładowaniu strony.</p>
+							<diV class="description-project">
+								<p class="text-smaller">Popularna aplikacja, u mnie napisana z wykorzystaniem standardów ES6. Ułatwiłem sobie życie i zoptymalizowałem kod dzięki loaderom Webpacka. Aplikacja nie jest podpięta do żadnej bazy, więc dane nie zapisują się po przeładowaniu strony.</p>
+							</div>
 							<div class="visit-btns-line">
-								<a target="blank" href="https://github.com/ParanAndro/ToDoApp/tree/master"><button class="visit-btns">Zobacz na GitHub</button></a>
-								<button class="visit-btns">Zobacz na www</button>
+								<a class="visit-btns" target="blank" href="https://github.com/ParanAndro/ToDoApp/tree/master">Zobacz na GitHub</a>
+								<a class="visit-btns">Zobacz na www</a>
 							</div>
 						</div>
 					</div>
 					<div class="project">
-						<button class="show-buttons btn-4"><p>Stoper</p><span></span></button>
+						<button class="show-buttons btn-4">Stoper<br><span></span></button>
 						<div class="hidd">
-							<p class="text-smaller">Stoper napisany w React z użyciem składni ES6.</p>
+							<div class="description-project">
+								<p class="text-smaller">Stoper napisany w React z użyciem składni ES6. Użyłem również Babla do transpilacji kodu z ES6 na standard ES5 aby umożliwić obsługę funkcjonalności we wszystkich środowiskach</p>
+							</div>
 							<div class="visit-btns-line">
-								<a target="blank" href="https://github.com/ParanAndro/javascr-ES6-15.6-timer.git"><button class="visit-btns">Zobacz na GitHub</button></a>
-								<button class="visit-btns">Zobacz na www</button>
+								<a class="visit-btns" target="blank" href="https://github.com/ParanAndro/javascr-ES6-15.6-timer.git">Zobacz na GitHub</a>
+								<a class="visit-btns">Zobacz na www</a>
 							</div>
 						</div>
 					</div>
 					<div class="project">
-						<button class="show-buttons btn-5"><p>Aplikacja "Pobierz cytat"</p><span></span></button>
+						<button class="show-buttons btn-5">Aplikacja "Pobierz cytat"<br><span></span></button>
 						<div class="hidd">
-							<p class="text-smaller">Apka do losowego pobierania i wyświetlania cytatów, zbudowana z wykorzystaniem technologii Ajax w jQuery. Dodatkowa opcja to możliwość publikacji cytatów na Twitterze, co wymagało dodatkowej metody do selekcji cytatów o ilości znaków < 140.</p>
+							<div class="description-project">
+								<p class="text-smaller">Apka do losowego pobierania i wyświetlania cytatów, zbudowana z wykorzystaniem technologii Ajax w jQuery. Dodatkowa opcja to możliwość publikacji cytatów na Twitterze, co wymagało dodatkowej metody do selekcji cytatów o ilości znaków do 140.</p>
+							</div>
 							<div class="visit-btns-line">
-								<a target="blank" href="https://github.com/ParanAndro/javascr-proj-15.git"><button class="visit-btns">Zobacz na GitHub</button></a>
-								<button class="visit-btns">Zobacz na www</button>
+								<a class="visit-btns" target="blank" href="https://github.com/ParanAndro/javascr-proj-15.git">Zobacz na GitHub</a>
+								<a class="visit-btns">Zobacz na www</a>
 							</div>
 						</div>
 					</div>
 					<div class="project">
-						<button class="show-buttons btn-6"><p>Statyczny landing-page</p><span></span></button>
+						<button class="show-buttons btn-6">Statyczny landing-page<br><span></span></button>
 						<div class="hidd">
-							<p class="text-smaller">Statyczny landing-page „pocięty” wg zadanego projektu grafika przekazanego w psd. Zbudowany na gridzie w konwencji RWD, przy użyciu podstawowego kodu html i stylowania css (sass). Projekt załączony do repozytorium na GitHubie.</p>
+							<div class="description-project">
+								<p class="text-smaller">Statyczny landing-page „pocięty” wg zadanego projektu grafika przekazanego w psd. Zbudowany na gridzie w konwencji RWD, przy użyciu podstawowego kodu html i stylowania css (sass). Projekt graficzny załączony do repozytorium na GitHubie.</p>
+							</div>
 							<div class="visit-btns-line">
-								<a target="blank" href="https://github.com/ParanAndro/Portfolio-static-landing-page-1"><button class="visit-btns">Zobacz na GitHub</button></a>
-								<button class="visit-btns">Zobacz na www</button>
+								<a class="visit-btns" target="blank" href="https://github.com/ParanAndro/Portfolio-static-landing-page-1">Zobacz na GitHub</a>
+								<a class="visit-btns">Zobacz na www</a>
 							</div>
 						</div>
 					</div>
 					<div class="project">
-						<button class="show-buttons btn-7"><p>Karuzela</p><span></span></button>
+						<button class="show-buttons btn-7">Karuzela<br><span></span></button>
 						<div class="hidd">
-							<p class="text-smaller">Prosta samoprzewijająca karuzela ze zdjęciami, napisana w jQuery. Interwał ustawiony na 3 s. Podstawowy html i stylowanie w css z użyciem preprocesora sass.</p>
+							<div class="description-project">
+								<p class="text-smaller">Prosta samoprzewijająca karuzela ze zdjęciami, napisana w jQuery. Interwał ustawiony na 3 s. Podstawowy html i stylowanie w css z użyciem preprocesora sass.</p>
+							</div>
 							<div class="visit-btns-line">
-								<a target="blank" href="https://github.com/ParanAndro/Portfolio-carousel-JQuery"><button class="visit-btns">Zobacz na GitHub</button></a>
-								<button class="visit-btns">Zobacz na www</button>
+								<a class="visit-btns" target="blank" href="https://github.com/ParanAndro/Portfolio-carousel-JQuery">Zobacz na GitHub</a>
+								<a class="visit-btns">Zobacz na www</a>
 							</div>
 						</div>
 					</div>
@@ -153,16 +171,18 @@
 						<i class="fa fa-phone icons"></i>
 						<span>791 545 869</span>
 					</div>
-					<div class="contact area-line">
-						<i class="fa fa-github icons"></i>
-						<span>ParanAndro</span>
-					</div>
-					<div class="contact linkedin">
-						<i class="fa fa-linkedin icons"></i>
-						<span>www.linkedin.com/in/radek1izdebski</span>
-					</div>
-
-
+					<a target="blank" href="https://github.com/ParanAndro">
+						<div class="contact area-line">
+							<i class="fa fa-github icons"></i>
+							<span>ParanAndro</span>
+						</div>
+					</a>
+					<a target="blank" href="https://www.linkedin.com/in/radek1izdebski/">
+						<div class="contact linkedin">
+							<i class="fa fa-linkedin icons"></i>
+							<span>www.linkedin.com/in/radek1izdebski</span>
+						</div>
+					</a>
 				</div>
 			</section>
 		</section>

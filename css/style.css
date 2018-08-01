@@ -25,6 +25,7 @@
 body {
   font: 100% Lato, sans-serif;
   margin: 0 auto;
+  padding-top: 30px;
 }
 
 * {
@@ -224,6 +225,21 @@ nav .menu-icon {
   opacity: 0.9;
 }
 
+.this-page {
+  display: flex;
+  justify-content: center;
+}
+
+.this-page .btn-this-page-github {
+  background-color: #FF4500;
+  text-decoration: none;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 5px;
+  border: 1px solid #FFFFFF;
+  padding: 5px;
+}
+
 .all-projects {
   display: flex;
   flex-direction: column;
@@ -247,14 +263,11 @@ nav .menu-icon {
   cursor: pointer;
 }
 
-.all-projects .project .show-buttons p {
-  margin: 5px auto;
-}
-
 .all-projects .project .show-buttons span {
   content: " \25BD";
   max-width: 10px;
   font-weight: bold;
+  position: absolute;
 }
 
 .all-projects .project .show-buttons:hover {
@@ -300,6 +313,10 @@ nav .menu-icon {
   transition: .6s ease opacity,.6s ease transform;
 }
 
+.all-projects .project .hidd .description-project {
+  width: 90%;
+}
+
 .all-projects .project .hidd .visit-btns-line {
   width: 70%;
   display: flex;
@@ -310,6 +327,10 @@ nav .menu-icon {
   width: 100px;
   height: 4em;
   font-size: 10px;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
   color: #FFFFFF;
   background-color: #FF4500;
@@ -349,6 +370,10 @@ nav .menu-icon {
   display: flex;
   color: #FFFFFF;
   text-align: center;
+}
+
+.contacts a {
+  text-decoration: none;
 }
 
 .icons {

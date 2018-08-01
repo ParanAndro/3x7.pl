@@ -16,13 +16,11 @@
 			color: $global-gray;
 			border-radius: 5px;
 			cursor: pointer;
-				p {
-				margin: 5px auto;
-				}
 				span {
 					content: " \25BD";
 					max-width: 10px;
 					font-weight: bold;
+					position: absolute;
 				}
 		}
 		.show-buttons:hover {
@@ -60,6 +58,9 @@
 			opacity: 0;
 			transform: scale(0);
 			transition: .6s ease opacity,.6s ease transform;
+				.description-project {
+					width: 90%;
+				}
 				.visit-btns-line {
 					width: 70%;
 					display: flex;
@@ -68,6 +69,10 @@
 							width: 100px;
 							height: 4em;
 							font-size: 10px;
+							display: flex;
+							text-decoration: none;
+							align-items: center;
+							justify-content: center;
 							font-weight: bold;
 							color: #FFFFFF;
 							background-color: $global-orange;

@@ -1,13 +1,13 @@
 //navigation variables
 const menuButton = document.getElementById('hamburger');//responsive menu
-let aboutMeMenu = document.getElementById('1');
-let aboutMeTarget = document.getElementById('1-target');
-let aboutThisPage = document.getElementById('2');
-let aboutThisPageTarget = document.getElementById('2-target');
-let galleryMenu = document.getElementById('3');
-let galleryTarget = document.getElementById('3-target');
-let contactMenu = document.getElementById('4');
-let contactTarget = document.getElementById('4-target');
+const aboutMeMenu = document.getElementById('1');
+const aboutMeTarget = document.getElementById('1-target');
+const aboutThisPage = document.getElementById('2');
+const aboutThisPageTarget = document.getElementById('2-target');
+const galleryMenu = document.getElementById('3');
+const galleryTarget = document.getElementById('3-target');
+const contactMenu = document.getElementById('4');
+const contactTarget = document.getElementById('4-target');
 
 //gallery variable
 const allButtons = document.getElementsByClassName('show-buttons');
@@ -35,15 +35,14 @@ contactMenu.addEventListener('click', function() {
 //switching hide/show description in gallery
 for (i = 0; i < allButtons.length; i++) { 
 	const button = allButtons[i];
-	let arrows = button.querySelector(':scope span');
 	let div = button.nextElementSibling;
 
-	function buttonColorArrUp() {
+	function buttonColorUp() {
 		button.style.backgroundColor = '#8497b0';
 		button.style.color = '#FF4500';
 	}
 
-	function buttonColorArrDown() {
+	function buttonColorDown() {
 		button.style.backgroundColor = '';
 		button.style.color = '';
 	}
@@ -54,7 +53,6 @@ for (i = 0; i < allButtons.length; i++) {
 			div.style.transform = 'scale(1)';
 			}, 0);
 		div.style.display = 'flex';
-		arrows.innerHTML = "\u25B3";
 	};
 	
 	function hideDiv() {
@@ -63,16 +61,15 @@ for (i = 0; i < allButtons.length; i++) {
 			div.style.transform = 'scale(0)';
 			}, 700);
 		div.style.display = 'none';
-		arrows.innerHTML = "\u25BD";
 	};
 
 	button.addEventListener('click', function() {
 		if (div.style.display === 'none') {
 			showDiv();
-			buttonColorArrUp();
+			buttonColorUp();
 		} else {
 			hideDiv();
-			buttonColorArrDown();
+			buttonColorDown();
 		}
 	}, hideDiv());
 };
