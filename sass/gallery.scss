@@ -53,11 +53,10 @@
 			width: 70%;
 			flex-direction: column;
 			align-items: center;
-			margin-top: 2em;
+			margin-top: 0.5em;
 			@extend .center;
-			opacity: 0;
-			transform: scale(0);
-			transition: .6s ease opacity,.6s ease transform;
+			overflow: hidden;
+			transition: height .5s;
 				.description-project {
 					width: 90%;
 				}
@@ -85,6 +84,7 @@
 							background-color: $global-gray;
 						}
 				}
+		
 		}
 	}
 }

@@ -1,77 +1,74 @@
-//navigation variables
-const menuButton = document.getElementById('hamburger');//responsive menu
-const aboutMeMenu = document.getElementById('1');
-const aboutMeTarget = document.getElementById('1-target');
-const aboutThisPage = document.getElementById('2');
-const aboutThisPageTarget = document.getElementById('2-target');
-const galleryMenu = document.getElementById('3');
-const galleryTarget = document.getElementById('3-target');
-const contactMenu = document.getElementById('4');
-const contactTarget = document.getElementById('4-target');
+//Navigation
+function navigation() {
+	//navigation variables
+	const menuButton = document.getElementById('hamburger');//responsive menu button
+	const aboutMeMenu = document.getElementById('1');
+	const aboutMeTarget = document.getElementById('1-target');
+	const aboutThisPage = document.getElementById('2');
+	const aboutThisPageTarget = document.getElementById('2-target');
+	const galleryMenu = document.getElementById('3');
+	const galleryTarget = document.getElementById('3-target');
+	const contactMenu = document.getElementById('4');
+	const contactTarget = document.getElementById('4-target');
 
-//gallery variable
-const allButtons = document.getElementsByClassName('show-buttons');
+	//navigation: smooth scrolling
+	aboutMeMenu.addEventListener('click', function() {
+		aboutMeTarget.scrollIntoView({behavior: 'smooth'});
+	});
+	aboutThisPage.addEventListener('click', function() {
+		aboutThisPageTarget.scrollIntoView({behavior: 'smooth'});
+	});
+	galleryMenu.addEventListener('click', function() {
+		galleryTarget.scrollIntoView({behavior: 'smooth'});
+	});
+	contactMenu.addEventListener('click', function() {
+		contactTarget.scrollIntoView({behavior: 'smooth'});
+	});
 
-//responsive menu: switching view
-menuButton.addEventListener('click', function() {
-    document.getElementById("menu").classList.toggle("show");
+	//responsive menu: switching view
+	menuButton.addEventListener('click', function() {
+    document.getElementById('menu').classList.toggle('show');
     return false;
-});
-
-//navigation: smooth scrolling
-aboutMeMenu.addEventListener('click', function() {
-	aboutMeTarget.scrollIntoView({behavior: 'smooth'});
-});
-aboutThisPage.addEventListener('click', function() {
-	aboutThisPageTarget.scrollIntoView({behavior: 'smooth'});
-});
-galleryMenu.addEventListener('click', function() {
-	galleryTarget.scrollIntoView({behavior: 'smooth'});
-});
-contactMenu.addEventListener('click', function() {
-	contactTarget.scrollIntoView({behavior: 'smooth'});
-});
+	});
+};
+navigation();
 
 //switching hide/show description in gallery
-for (i = 0; i < allButtons.length; i++) { 
-	const button = allButtons[i];
-	let div = button.nextElementSibling;
+function showHide() {
+	const allButtons = document.getElementsByClassName('show-buttons');
+	for (i = 0; i < allButtons.length; i++) { 
+		let button = allButtons[i];
+		let div = button.nextElementSibling;
 
-	function buttonColorUp() {
-		button.style.backgroundColor = '#8497b0';
-		button.style.color = '#FF4500';
-	}
-
-	function buttonColorDown() {
-		button.style.backgroundColor = '';
-		button.style.color = '';
-	}
-	
-	function showDiv() {
-		window.setTimeout(function() {
-			div.style.opacity = 1;
-			div.style.transform = 'scale(1)';
-			}, 0);
-		div.style.display = 'flex';
+		const ShowHide = {
+		    init: function() {
+		        if (!div.hasAttribute('data-height')) {
+		            div.dataset.height = div.offsetHeight+"px";
+		            div.className = 'hidd';
+		            div.style.height = 0;
+		        }
+		        return div;
+		    },
+		};
+		
+		button.addEventListener('click', function() {
+				if (div.style.display === 'none') {
+					div.style.display = 'flex';
+					div.style.opacity = 1;
+					button.style.backgroundColor = '#8497b0';
+					button.style.color = '#FF4500';
+			        let element = ShowHide.init();
+			        setTimeout(function() { element.style.height = element.dataset.height; }, 30);
+				} else {
+					div.style.display = 'none';
+					div.style.opacity = 0;
+					button.style.backgroundColor = '';
+					button.style.color = '';
+			        let element = ShowHide.init();
+			        element.style.height = 0;
+			    }
+		}, div.style.display = 'none');
 	};
-	
-	function hideDiv() {
-		window.setTimeout(function() {
-			div.style.opacity = 0;
-			div.style.transform = 'scale(0)';
-			}, 700);
-		div.style.display = 'none';
-	};
-
-	button.addEventListener('click', function() {
-		if (div.style.display === 'none') {
-			showDiv();
-			buttonColorUp();
-		} else {
-			hideDiv();
-			buttonColorDown();
-		}
-	}, hideDiv());
 };
+showHide();
  
-
