@@ -14,7 +14,7 @@
   text-align: justify;
 }
 
-.row, nav, .contacts {
+.row, .contacts {
   -ms-flex-direction: row;
       flex-direction: row;
 }
@@ -33,8 +33,8 @@ body {
   box-sizing: border-box;
 }
 
-.box, .box-white, .box-gray {
-  margin-top: 30px;
+.target {
+  height: 30px;
 }
 
 .container {
@@ -118,7 +118,7 @@ h3 {
   h3 {
     font-size: 15px;
   }
-  .box, .box-white, .box-gray {
+  .box {
     margin-top: 10px;
   }
   .title .line {
@@ -138,13 +138,10 @@ h3 {
 }
 
 nav {
-  display: -ms-flexbox;
-  display: flex;
   background-color: #FF4500;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   position: fixed;
   top: 0;
+  overflow: hidden;
   width: 100%;
   z-index: 1;
 }
@@ -152,21 +149,18 @@ nav {
 nav .nav-brand {
   width: auto;
   height: 3em;
-  padding: 2px 0;
+  margin-left: 15%;
   cursor: pointer;
 }
 
 nav ul {
-  list-style: none;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  list-style-type: none;
+  float: right;
+  margin-right: 15%;
 }
 
 nav ul li {
+  display: inline;
   font-size: 120%;
   padding: 0 20px;
   margin: 0;
@@ -175,45 +169,52 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #FFFFFF;
-  transition: 0.4;
 }
 
 nav ul li a:hover {
   color: #8497b0;
 }
 
-nav ul.show {
-  display: block;
-}
-
 nav .menu-icon {
   display: none;
-  padding-right: 10px;
-  font-size: 150%;
-  color: #FFFFFF;
 }
 
 @media (max-width: 1200px) {
-  nav {
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-align: center;
-        align-items: center;
-    position: relative;
-  }
   nav ul {
     display: none;
+  }
+  nav .menu-icon {
+    float: right;
+    display: block;
+    padding: 13px 15px;
+    font-size: 140%;
+    color: #FFFFFF;
+  }
+  nav .menu-icon:hover {
+    background-color: #8497b0;
+  }
+}
+
+@media (max-width: 1200px) {
+  nav.responsive {
+    position: relative;
+  }
+  nav.responsive ul.responsive {
+    float: none;
     position: absolute;
-    margin: 40px auto;
+    display: block;
+    text-align: left;
     background-color: #8497b0;
     line-height: 200%;
     opacity: 0.8;
   }
-  nav ul li {
-    display: block;
+  nav.responsive ul.responsive li a:hover {
+    color: #FF4500;
   }
-  nav .menu-icon {
-    display: block;
+  nav.responsive .menu-icon.responsive {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 
@@ -330,10 +331,9 @@ nav .menu-icon {
       flex-direction: column;
   -ms-flex-align: center;
       align-items: center;
-  margin-top: 2em;
-  opacity: 0;
-  transform: scale(0);
-  transition: .6s ease opacity,.6s ease transform;
+  margin-top: 0.5em;
+  overflow: hidden;
+  transition: height .5s;
 }
 
 .all-projects .project .hidd .description-project {
