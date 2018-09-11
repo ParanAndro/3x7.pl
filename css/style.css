@@ -152,6 +152,7 @@ nav {
     position: relative; }
     nav.responsive ul {
       float: none;
+      position: absolute;
       display: block;
       text-align: left;
       background-color: #8497b0;
