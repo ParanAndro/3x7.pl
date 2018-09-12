@@ -182,27 +182,31 @@ nav ul li a:hover {
   color: #8497b0;
 }
 
-nav ul.show {
-  display: block;
-}
-
 nav .menu-icon {
   display: none;
-  padding-right: 10px;
-  font-size: 150%;
-  color: #FFFFFF;
 }
 
 @media (max-width: 1200px) {
   nav {
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-align: center;
-        align-items: center;
     position: relative;
   }
   nav ul {
     display: none;
+  }
+  nav .menu-icon {
+    display: block;
+    padding-right: 10px;
+    font-size: 150%;
+    color: #FFFFFF;
+  }
+  nav.show-menu {
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  nav.show-menu ul {
+    display: block;
     position: absolute;
     margin: 0;
     padding-top: 100px;
@@ -210,14 +214,11 @@ nav .menu-icon {
     line-height: 200%;
     opacity: 0.8;
   }
-  nav ul li {
+  nav.show-menu ul li {
     display: block;
   }
-  nav ul li a:hover {
+  nav.show-menu ul li a:hover {
     color: #FF4500;
-  }
-  nav .menu-icon {
-    display: block;
   }
 }
 

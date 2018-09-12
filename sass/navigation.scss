@@ -1,12 +1,12 @@
 nav {
 	display: flex;
+	width: 100vw;
 	background-color: $global-orange;
 	@extend .row;
 	justify-content: space-around;
 	position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
+	top: 0;
+	z-index: 1;
 		.nav-brand {
 			width: auto;
 			height: 3em;
@@ -18,55 +18,59 @@ nav {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			li {
-				font-size: 120%;
-				padding: 0 20px;
-				margin: 0;
-				a, {
-					text-decoration: none;
-					color: #FFFFFF;
-					transition: 0.4;
+				li {
+					font-size: 120%;
+					padding: 0 20px;
+					margin: 0;
+						a, {
+							text-decoration: none;
+							color: #FFFFFF;
+							transition: 0.4;
+						}
+						a:hover, {
+							color: $global-gray;
+						}
 				}
-				a:hover, {
-					color: $global-gray;
-				}
-			}
-		}
-		ul.show {
-			display: block;
 		}
 		.menu-icon {
-		display: none;
-		padding-right: 10px;
-		font-size: 150%;
-		color: #FFFFFF;
+			display: none;
 		}
 }
 
+
 @media (max-width: 1200px) {
 	nav {
-		justify-content: space-between;
-		align-items: center;
 		position: relative;
+		justify-content: space-between;
+			ul {
+				display: none;
+			}
+			.menu-icon {
+				float: right;
+				display: block;
+				padding: 13px 15px;
+				font-size: 140%;
+				color: #FFFFFF;
+
+			}
+	}
+	nav.show-menu {
 		ul {
-			display: none;
+			display: block;
 			position: absolute;
-			margin: 0;
-			padding-top: 100px;
+			width: 100vw;
+			margin-top: 52px;
 			background-color: $global-gray;
 			line-height: 200%;
 			opacity: 0.8;
-			li {
-				display: block;
-				a:hover, {
-					color: $global-orange;
+				li {
+					display: block;
+						a:hover, {
+							color: $global-orange;
+						}
 				}
-			}
-		}
-		.menu-icon {
-			display: block;
 		}
 	}
 }
 
-			
+//smooth scrolling

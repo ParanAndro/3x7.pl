@@ -1,37 +1,13 @@
-//Navigation
-function navigation() {
-	//navigation variables
-	const menuButton = document.getElementById('hamburger');//responsive menu button
-	const aboutMeMenu = document.getElementById('1');
-	const aboutMeTarget = document.getElementById('1-target');
-	const aboutThisPage = document.getElementById('2');
-	const aboutThisPageTarget = document.getElementById('2-target');
-	const galleryMenu = document.getElementById('3');
-	const galleryTarget = document.getElementById('3-target');
-	const contactMenu = document.getElementById('4');
-	const contactTarget = document.getElementById('4-target');
+//Responsive menu
+document.getElementById('hamburger').addEventListener('click', function() {
+	const menuResponsive = document.getElementById('navigation');
+	if (menuResponsive.className === 'hide-menu') {
+		menuResponsive.className += ' show-menu';
+	} else {
+		menuResponsive.className = 'hide-menu';
+	}
+})
 
-	//navigation: smooth scrolling
-	aboutMeMenu.addEventListener('click', function() {
-		aboutMeTarget.scrollIntoView({behavior: 'smooth'});
-	});
-	aboutThisPage.addEventListener('click', function() {
-		aboutThisPageTarget.scrollIntoView({behavior: 'smooth'});
-	});
-	galleryMenu.addEventListener('click', function() {
-		galleryTarget.scrollIntoView({behavior: 'smooth'});
-	});
-	contactMenu.addEventListener('click', function() {
-		contactTarget.scrollIntoView({behavior: 'smooth'});
-	});
-
-	//responsive menu: switching view
-	menuButton.addEventListener('click', function() {
-    document.getElementById('menu').classList.toggle('show');
-    return false;
-	});
-};
-navigation();
 
 //switching hide/show description in gallery
 function showHide() {
