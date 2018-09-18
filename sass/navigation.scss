@@ -1,29 +1,31 @@
 nav {
+	display: flex;
+	width: 100vw;
 	background-color: $global-orange;
+	@extend .row;
+	justify-content: space-around;
 	position: fixed;
-    top: 0;
-    overflow: hidden;
-    width: 100%;
-    z-index: 1;
+	top: 0;
+	z-index: 1;
 		.nav-brand {
 			width: auto;
 			height: 3em;
-			margin-left: 15%;
+			padding: 2px 0;
 			cursor: pointer;
 		}
 		ul {
-			list-style-type: none;
-			float: right;
-			display: block;
-			margin-right: 15%;
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
 				li {
-					display: inline;
 					font-size: 120%;
 					padding: 0 20px;
 					margin: 0;
 						a, {
 							text-decoration: none;
 							color: #FFFFFF;
+							transition: 0.4;
 						}
 						a:hover, {
 							color: $global-gray;
@@ -33,49 +35,40 @@ nav {
 		.menu-icon {
 			display: none;
 		}
-	}
+}
+
 
 @media (max-width: 1200px) {
-		nav ul {
-			display: none;
-			}
-		nav .menu-icon {
-			float: right;
-			display: block;
-			padding: 13px 15px;
-			font-size: 140%;
-			color: #FFFFFF;
-		}
-		nav .menu-icon:hover {
-			background-color: $global-gray;
-		}
-}
-@media (max-width: 1200px) {
-	nav.responsive {
-		position: relative;
+	nav.hidden-menu {
+		justify-content: space-between;
 			ul {
-				float: none;
-				position: absolute;
-				display: block;
-				text-align: left;
-				background-color: $global-gray;
-				line-height: 200%;
-				width: 100%;
-				margin: 0;
-				opacity: 0.8;
-					li {
-						display: block;
-					}
-					li a:hover {
-						color: $global-orange;
-					}
+				display: none;
 			}
 			.menu-icon {
-				position: absolute;
-				right: 0;
-				top: 0;
+				float: right;
+				display: block;
+				padding: 13px 15px;
+				font-size: 140%;
+				color: #FFFFFF;
+
 			}
+	}
+	nav.show-menu {
+		ul {
+			display: block;
+			position: absolute;
+			width: 100vw;
+			margin-top: 52px;
+			background-color: $global-gray;
+			line-height: 200%;
+			opacity: 0.8;
+				li {
+					display: block;
+						a:hover, {
+							color: $global-orange;
+						}
+				}
+		}
 	}
 }
 
-			
