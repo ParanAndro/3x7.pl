@@ -1,6 +1,7 @@
 //Navigation
 function navigation() {
 	//navigation variables
+	const menuResponsive = document.getElementById('hamburger');
 	const aboutMeMenu = document.getElementById('1');
 	const aboutMeTarget = document.getElementById('1-target');
 	const aboutThisPage = document.getElementById('2');
