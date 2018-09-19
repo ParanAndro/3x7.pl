@@ -1,7 +1,6 @@
 //Navigation
 function navigation() {
 	//navigation variables
-	const menuButton = document.getElementById('hamburger');//responsive menu button
 	const aboutMeMenu = document.getElementById('1');
 	const aboutMeTarget = document.getElementById('1-target');
 	const aboutThisPage = document.getElementById('2');
@@ -26,10 +25,14 @@ function navigation() {
 	});
 
 	//responsive menu: switching view
-	menuButton.addEventListener('click', function() {
-    document.getElementById('menu').classList.toggle('show');
-    return false;
-	});
+	document.getElementById('hamburger').addEventListener('click', function() {
+		const menuResponsive = document.getElementById('navigation');
+		if (menuResponsive.className === 'hidden-menu') {
+			menuResponsive.className += ' show-menu';
+		} else {
+			menuResponsive.className = 'hidden-menu';
+		}
+	})
 };
 navigation();
 

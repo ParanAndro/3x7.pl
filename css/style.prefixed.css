@@ -140,12 +140,12 @@ h3 {
 nav {
   display: -ms-flexbox;
   display: flex;
+  width: 100vw;
   background-color: #FF4500;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 1;
 }
 
@@ -182,42 +182,39 @@ nav ul li a:hover {
   color: #8497b0;
 }
 
-nav ul.show {
-  display: block;
-}
-
 nav .menu-icon {
   display: none;
-  padding-right: 10px;
-  font-size: 150%;
-  color: #FFFFFF;
 }
 
 @media (max-width: 1200px) {
-  nav {
+  nav.hidden-menu {
     -ms-flex-pack: justify;
         justify-content: space-between;
-    -ms-flex-align: center;
-        align-items: center;
-    position: relative;
   }
-  nav ul {
+  nav.hidden-menu ul {
     display: none;
+  }
+  nav.hidden-menu .menu-icon {
+    float: right;
+    display: block;
+    padding: 13px 15px;
+    font-size: 140%;
+    color: #FFFFFF;
+  }
+  nav.show-menu ul {
+    display: block;
     position: absolute;
-    margin: 0;
-    padding-top: 100px;
+    width: 100vw;
+    margin-top: 52px;
     background-color: #8497b0;
     line-height: 200%;
     opacity: 0.8;
   }
-  nav ul li {
+  nav.show-menu ul li {
     display: block;
   }
-  nav ul li a:hover {
+  nav.show-menu ul li a:hover {
     color: #FF4500;
-  }
-  nav .menu-icon {
-    display: block;
   }
 }
 
