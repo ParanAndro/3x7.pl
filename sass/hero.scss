@@ -11,9 +11,10 @@
 		.welcome {
 			@extend .center;
 			width: 320px;
-			color: $global-orange;
-			background-color: rgba(0, 0, 0, 0.5);
+			border-radius: 3px;
+			color: $global-white;
+			background-color: rgba(255, 69, 0, 0.4);
 			opacity: 0.9;
-			}
+		}
 		
 }

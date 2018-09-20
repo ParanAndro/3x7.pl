@@ -1,6 +1,6 @@
 .all-projects {
 	display: flex;
-	flex-direction: column;
+	@extend .column;
 	align-items: center;
 	margin-top: 0;
 	.project {
@@ -13,7 +13,7 @@
 			height: 4em;
 			font-size: 16px;
 			font-weight: bold;
-			color: $global-gray;
+			color: $global-white;
 			border-radius: 5px;
 			cursor: pointer;
 				span {
@@ -29,25 +29,25 @@
 		}
 		
 		.btn-1 {
-			background-color: #CC0033;
+			background-color: #848484;
 		}
 		.btn-2 {
-			background-color: #FF3366;
+			background-color: #7C7C7C;
 		}
 		.btn-3 {
-			background-color: #CC3366;
+			background-color: #717171;
 		}
 		.btn-4 {
-			background-color: #CC0066;
+			background-color: #666666;
 		}
 		.btn-5 {
-			background-color: #993366;
+			background-color: #5A5A5A;
 		}
 		.btn-6 {
-			background-color: #CC3399;
+			background-color: #464646;
 		}
 		.btn-7 {
-			background-color: #FF0066;
+			background-color: #3F3F3F;
 		}
 		.hidd {
 			width: 70%;
@@ -75,7 +75,7 @@
 							font-weight: bold;
 							color: #FFFFFF;
 							background-color: $global-orange;
-							border: 1px solid #FFFFFF;
+							border: 1px solid $global-white;
 							border-radius: 3px;
 							transition: 0.4s;
 							cursor: pointer;

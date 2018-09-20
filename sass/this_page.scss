@@ -1,13 +1,18 @@
 .this-page {
 	display: flex;
 	justify-content: center;
-	.btn-this-page-github {
-			background-color: $global-orange;
-			text-decoration: none;
-			text-align: center;
-			color: #FFFFFF;
-			border-radius: 5px;
-			border: 1px solid #FFFFFF;
-			padding: 5px;
-	}
+		.btn-this-page-github {
+				background-color: $global-orange;
+				text-decoration: none;
+				text-align: center;
+				color: $global-white;
+				border-radius: 5px;
+				border: 1px solid $global-white;
+				padding: 5px;
+		}
+		p {
+			.orange {
+				color: $global-orange;
+			}
+		}
 }
