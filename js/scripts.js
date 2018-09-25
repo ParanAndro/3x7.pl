@@ -1,7 +1,6 @@
 //Navigation
 function navigation() {
 	//navigation variables
-	const menuResponsive = document.getElementById('hamburger');
 	const aboutMeMenu = document.getElementById('1');
 	const aboutMeTarget = document.getElementById('1-target');
 	const aboutThisPage = document.getElementById('2');
@@ -26,7 +25,7 @@ function navigation() {
 	});
 
 	//responsive menu: switching view
-	document.getElementById('hamburger').addEventListener('click', function() {
+	document.getElementsByClassName('menu-icon')[0].addEventListener('click', function() {
 		const menuResponsive = document.getElementById('navigation');
 		if (menuResponsive.className === 'hidden-menu') {
 			menuResponsive.className += ' show-menu';
