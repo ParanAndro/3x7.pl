@@ -32,8 +32,8 @@ function navigation() {
 		} else {
 			menuResponsive.className = 'hidden-menu';
 		}
-	})
-};
+	});
+}
 navigation();
 
 //switching hide/show description in gallery
@@ -71,7 +71,7 @@ function showHide() {
 			        element.style.height = 0;
 			    }
 		}, div.style.display = 'none');
-	};
-};
+	}
+}
 showHide();
  
